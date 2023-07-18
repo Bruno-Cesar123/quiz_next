@@ -14,6 +14,18 @@ const questions: QuestionModel[] = [
     AnswerModel.wrong('Chuchu'),
     AnswerModel.certain('Abóbora'),
   ]),
+  new QuestionModel(203, 'Qual é o coletivo de cães ?', [
+    AnswerModel.wrong('Manada'),
+    AnswerModel.wrong('Alcateia'),
+    AnswerModel.wrong('Rebanho'),
+    AnswerModel.certain('Matilha'),
+  ]),
+  new QuestionModel(204, 'Qual é o triângulo que tem todos os lados diferentes ?', [
+    AnswerModel.wrong('Equilátero'),
+    AnswerModel.wrong('Isóceles'),
+    AnswerModel.wrong('Trapézio'),
+    AnswerModel.certain('Escaleno'),
+  ]),
 ]
 
 export default questions
