@@ -38,5 +38,14 @@ export default class QuestionModel {
     return false
   }
 
+  toObject() {
+    return {
+      id: this.#id,
+      statement: this.#statement,
+      answers: this.#answers.map(resp => resp.toObject()),
+      hit: this.#hit
+    }
+  }
+
 
 }
