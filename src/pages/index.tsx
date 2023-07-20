@@ -16,6 +16,13 @@ export default function Home() {
   function handleOnResponse (index: number) {
     setQuestion(question.answerWith(index))
   }
+
+  function timerFinished() {
+    if(question.notAnswered) {
+      setQuestion(question.answerWith(-1))
+    }
+    
+  }
   return (
     <div style={{
       display: 'flex',
@@ -23,7 +30,7 @@ export default function Home() {
       alignItems: 'center',
       height: '100vh'
     }}>
-      <Question value={question} onResponse={handleOnResponse} />
+      <Question value={question} onResponse={handleOnResponse} timerFinished={timerFinished} />
     </div>
   )
 }
