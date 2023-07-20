@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Question from '../components/Question'
 import AnswerModel from '../model/answer'
 import QuestionModel from '../model/question'
+import Button from '../components/Button'
 
 const questionMoc = new QuestionModel(1, 'Melhor cor?', [
   AnswerModel.wrong('Verde'),
@@ -26,11 +27,13 @@ export default function Home() {
   return (
     <div style={{
       display: 'flex',
+      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       height: '100vh'
     }}>
-      <Question value={question} onResponse={handleOnResponse} timerFinished={timerFinished} />
+      <Question timerToAnswer={5} value={question} onResponse={handleOnResponse} timerFinished={timerFinished} />
+      <Button text="Próxima" href='/result' />
     </div>
   )
 }
