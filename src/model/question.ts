@@ -60,6 +60,11 @@ export default class QuestionModel {
     return new QuestionModel(this.#id, this.#statement, answersShuffle,this.#hit)
   }
 
+  static createUsingObject(obj: QuestionModel): QuestionModel {
+    const answers = obj.answers.map(resp => AnswerModel.createUsingObject(resp))
+    return new QuestionModel(obj.id, obj.statement, answers, obj.hit)
+  }
+
   toObject() {
     return {
       id: this.#id,
