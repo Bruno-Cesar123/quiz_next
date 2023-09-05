@@ -1,7 +1,7 @@
 import questions from '../dbQuestions'
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (req, res) => {
+export default function qauestionsForId(req, res) {
   const idSelected = +req.query.id
 
   const questionsSelected = questions.filter(question => question.id === idSelected)

@@ -3,8 +3,7 @@ import Estatic from '../components/Estatic'
 import styles from '../styles/Result.module.css'
 import { useRouter } from "next/router"
 
-export default function result() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+export default function Result() {
   const router = useRouter()
 
   const total = +router.query.total
