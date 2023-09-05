@@ -21,7 +21,7 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Typescript](https://www.typescriptlang.org/)
-- [Nextjs](https://tailwindcss.com/)
+- [Nextjs](https://nextjs.org/)
 
 ## 🎲 Rodando o Projeto
 
